@@ -20,6 +20,9 @@
     package = pkgs.gitAndTools.gitFull;
     userName = "atleSkaanes";
     userEmail = "atle.skaanes@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
 }
