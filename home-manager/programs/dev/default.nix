@@ -11,6 +11,8 @@
     pkg-config
     repgrep
     hyperfine
+
+    jdk
   ];
 
   programs.git = {

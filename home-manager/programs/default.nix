@@ -25,7 +25,7 @@
     wlogout
     lazygit
     wtype
-    imagemagick    
+    imagemagick
 
     alacritty
     swaylock
