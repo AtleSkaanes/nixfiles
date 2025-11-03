@@ -62,8 +62,8 @@
             catppuccin.nixosModules.catppuccin
             nix-flatpak.nixosModules.nix-flatpak
             chaotic.nixosModules.default
-            ./services
-            ./configuration.nix
+            # ./services
+            ./nixos/nixbook
           ];
         };
       };

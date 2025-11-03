@@ -5,6 +5,7 @@
 {
   imports = [
     ./keyd.nix
+    ./powerprofile.nix
   ];
 
   # Configure keymap in X11

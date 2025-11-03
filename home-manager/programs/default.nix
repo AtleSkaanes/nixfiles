@@ -41,6 +41,7 @@
     eza
     swww
     nautilus
+    pcmanfm
     yazi
     mpv
     eog
@@ -63,6 +64,10 @@
 
     man-pages
     glibcInfo
+    quickemu
+    qemu
+
+    libreoffice-qt6-fresh
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

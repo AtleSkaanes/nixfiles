@@ -11,6 +11,11 @@
     pkg-config
     repgrep
     hyperfine
+    vscodium
+    vscode-extensions.vadimcn.vscode-lldb
+    gdb
+
+    stylua
 
     jdk
   ];
