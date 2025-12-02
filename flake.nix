@@ -16,11 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
   };
 
   outputs =
     {
-      self,
       nixpkgs,
       nixpkgs-stable,
       home-manager,
@@ -39,6 +39,7 @@
       home-manager.useUserPackages = true;
       home-manager.useGlobalPkgs = true;
       home-manager.backupFileExtension = "hm-backup";
+
 
       homeConfigurations.atle = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {

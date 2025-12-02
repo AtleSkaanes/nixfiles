@@ -21,6 +21,10 @@
         appId = "com.stremio.Stremio";
         origin = "flathub";
       }
+      {
+        appId = "org.vinegarhq.Sober";
+        origin = "flathub";
+      }
       # "com.stremio.Stremio"
     ];
   };

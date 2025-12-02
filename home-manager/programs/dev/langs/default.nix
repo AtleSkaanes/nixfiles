@@ -5,5 +5,6 @@
     ./python.nix
     ./rust.nix
     ./zig.nix
+    ./lua.nix
   ];
 }
