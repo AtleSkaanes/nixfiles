@@ -14,6 +14,7 @@
     pkg-config
     repgrep
     hyperfine
+    poop
     vscodium
     vscode-extensions.vadimcn.vscode-lldb
     gdb
