@@ -6,5 +6,6 @@
     ./rust.nix
     ./zig.nix
     ./lua.nix
+    ./ocaml.nix
   ];
 }

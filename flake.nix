@@ -40,7 +40,6 @@
       home-manager.useGlobalPkgs = true;
       home-manager.backupFileExtension = "hm-backup";
 
-
       homeConfigurations.atle = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           inherit inputs;
