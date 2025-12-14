@@ -11,7 +11,7 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "dk";
-    variant = "nodeadkeys";
+    # variant = "nodeadkeys";
   };
 
   services.displayManager.sddm = {
