@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.nixd ];
+  home.packages = with pkgs; [
+    nixd
+    shellify  
+  ];
 }

@@ -1,9 +1,10 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./gaming
     ./dev
+    ./gaming
     ./ui
+    ./noctalia.nix
     ./rofi.nix
     ./xdg.nix
     ./zsh.nix
@@ -12,6 +13,8 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.default
     inputs.batlert.packages.x86_64-linux.default
+
+    fd
 
     tidal-hifi
     wl-mirror
@@ -54,8 +57,10 @@
 
     firefox
     waybar
+    wdisplays
     networkmanagerapplet
     blueman
+    adw-bluetooth
     obsidian
     zoxide
     pwvucontrol
@@ -69,6 +74,8 @@
     qemu
 
     libreoffice-qt6-fresh
+
+    solaar
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
