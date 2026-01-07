@@ -32,6 +32,7 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
+      "i915.enable_guc=3" # https://wiki.nixos.org/wiki/Intel_Graphics
     ];
   };
 }

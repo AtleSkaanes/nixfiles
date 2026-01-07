@@ -15,6 +15,7 @@
     inputs.batlert.packages.x86_64-linux.default
 
     fd
+    libnotify
 
     tidal-hifi
     wl-mirror
