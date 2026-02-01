@@ -24,6 +24,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       nixpkgs-stable,
       home-manager,
@@ -59,7 +60,7 @@
 
       nixosConfigurations = {
         nixbook = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs self; };
           inherit system;
           modules = [
             catppuccin.nixosModules.catppuccin
@@ -70,6 +71,8 @@
           ];
         };
       };
+
+      packages.${system}.observer = pkgs.callPackage ./packages/observer.nix { };
 
     };
 }

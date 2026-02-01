@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+# { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    # kernelPackages = pkgs.linuxPackages_cachyos-lto;
     loader = {
       # Hide the OS choice for bootloaders.
       # It's still possible to open the bootloader list by pressing any key
@@ -34,5 +34,9 @@
       "rd.systemd.show_status=auto"
       "i915.enable_guc=3" # https://wiki.nixos.org/wiki/Intel_Graphics
     ];
+
+    kernelModules = [ "ntsync" ];
+
+    supportedFilesystems = [ "ntfs" ];
   };
 }

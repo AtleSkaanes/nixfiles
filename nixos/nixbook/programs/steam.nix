@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  environment.sessionVariables = {
+    PROTON_ENABLE_WAYLAND = 1;
+    PROTON_USE_NTSYNC = 1;
+  };
 
   programs.steam = {
     enable = true;

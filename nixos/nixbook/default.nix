@@ -18,6 +18,7 @@
 
   catppuccin = {
     enable = true;
+    cache.enable = true;
     flavor = "mocha";
     accent = "lavender";
   };
@@ -89,15 +90,13 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-
-  # i18n.inputMethod = {
-  #   type = "fcitx5";
-  #   enable = true;
-  #   fcitx5.addons = with pkgs; [
-  #     fcitx5-mozc
-  #     fcitx5-gtk
-  #   ];
-  # };
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+    ];
+  };
 
   fonts = {
     enableDefaultPackages = true;
