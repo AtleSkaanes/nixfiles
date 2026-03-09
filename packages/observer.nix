@@ -29,34 +29,34 @@
   alsa-lib,
   at-spi2-atk,
 }:
-let 
+let
   dependencies = [
-      glib
-      # gio
-      nspr
-      nss
-      dbus
-      # atk
-      # atk-bridge
-      cups
-      cairo
-      gtk3
-      pango
-      libX11
-      libXcomposite
-      libXdamage
-      libXext
-      libXfixes
-      libXrandr
-      libgbm
-      expat
-      libxcb
-      libxkbcommon
-      udev
-      alsa-lib
-      at-spi2-atk
+    glib
+    # gio
+    nspr
+    nss
+    dbus
+    # atk
+    # atk-bridge
+    cups
+    cairo
+    gtk3
+    pango
+    libX11
+    libXcomposite
+    libXdamage
+    libXext
+    libXfixes
+    libXrandr
+    libgbm
+    expat
+    libxcb
+    libxkbcommon
+    udev
+    alsa-lib
+    at-spi2-atk
   ];
-in 
+in
 stdenv.mkDerivation {
   pname = "Arcanic-observer";
   version = "bin";
@@ -78,22 +78,19 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    mkdir -p $out/usr
-    mkdir -p $out/lib
 
-    cp -r ./usr $out/
-    cp ./opt/Observer/observer $out/bin/
-    cp ./opt/Observer/libffmpeg.so $out/lib/
+    cp -r . $out/
+    ln -s $out/opt/Observer/observer $out/bin/
   '';
 
   postFixup = ''
-    patchelf --set-interpreter "${stdenv.cc.bintools.dynamicLinker}" --set-rpath "${ lib.makeLibraryPath dependencies }:$out/lib" $out/bin/observer
+    patchelf --set-interpreter "${stdenv.cc.bintools.dynamicLinker}" --set-rpath "$out/opt/Observer" $out/opt/Observer/observer
   '';
 
-#   postInstall = ''
-#     wrapProgram $out/bin/observer \
-#       --prefix PATH : ${
-#         lib.makeLibraryPath dependencies
-#       }
-#   '';
+  #   postInstall = ''
+  #     wrapProgram $out/bin/observer \
+  #       --prefix PATH : ${
+  #         lib.makeLibraryPath dependencies
+  #       }
+  #   '';
 }

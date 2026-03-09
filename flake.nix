@@ -15,10 +15,12 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    KneeCapStealer = {
+      url = "github:KneeCapStealer/NixOSconfig";
     };
   };
 
@@ -30,7 +32,6 @@
       home-manager,
       nix-flatpak,
       catppuccin,
-      chaotic,
       ...
     }@inputs:
     let
@@ -59,20 +60,24 @@
       };
 
       nixosConfigurations = {
+        replaceStdenv = self.stdenv;
         nixbook = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs self; };
           inherit system;
           modules = [
             catppuccin.nixosModules.catppuccin
             nix-flatpak.nixosModules.nix-flatpak
-            chaotic.nixosModules.default
             # ./services
             ./nixos/nixbook
           ];
         };
       };
 
-      packages.${system}.observer = pkgs.callPackage ./packages/observer.nix { };
+      packages.${system} = {
+        observer = pkgs.callPackage ./packages/observer.nix { };
+        stoat-desktop = pkgs.callPackage ./packages/stoat-desktop.nix { };
+        zen-c = pkgs.callPackage ./packages/zen-c.nix { };
+      };
 
     };
 }

@@ -1,12 +1,14 @@
-{ pkgs, ... }:
+{  pkgs, ... }:
 {
   imports = [
     ./langs
+    ./unity.nix
   ];
 
   home.packages = with pkgs; [
     msbuild
     meld
+    glow
 
     vscode-extensions.vadimcn.vscode-lldb.adapter
     direnv
@@ -19,10 +21,10 @@
     vscodium
     vscode-extensions.vadimcn.vscode-lldb
     gdb
+    just
 
     stylua
 
-    unityhub
     jetbrains.clion
     jetbrains.rider
 

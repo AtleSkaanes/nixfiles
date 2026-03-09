@@ -5,6 +5,7 @@
     ./gaming
     ./ui
     ./noctalia.nix
+    ./typst.nix
     ./rofi.nix
     ./xdg.nix
     ./zsh.nix
@@ -13,6 +14,9 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.default
     inputs.batlert.packages.x86_64-linux.default
+
+    element-desktop
+    vesktop
 
     presenterm
     fd
@@ -37,7 +41,6 @@
     swaylock
     cowsay
     neovim
-    vesktop
     ghostty
     kitty
     playerctl
@@ -50,8 +53,10 @@
     pcmanfm
     yazi
     mpv
+    yt-dlp
     eog
     zathura
+    sioyek
     starship
     transmission_4-qt
     gnome-clocks

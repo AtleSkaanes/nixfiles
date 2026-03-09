@@ -108,6 +108,9 @@
 
       nerd-fonts.noto
       nerd-fonts.jetbrains-mono
+      crimson
+      crimson-pro
+      fira-sans
     ];
   };
   # This value determines the NixOS release from which the default

@@ -1,5 +1,5 @@
 {
-  # inputs,
+  inputs,
   config,
   ...
 }:
@@ -60,6 +60,9 @@
     # EDITOR = "neovim";
     ZDOTDIR = config.xdg.configHome + "/zsh";
     TERM = "xterm-ghostty";
+    TERMINAL = "xterm-ghostty";
+    DEFAULT_BROWSER = "${inputs.zen-browser.packages.x86_64-linux.default}/bin/zen";
+    BROWSER = "zen";
   };
 
   # Let Home Manager install and manage itself.

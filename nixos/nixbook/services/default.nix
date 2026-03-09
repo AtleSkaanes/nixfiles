@@ -5,7 +5,9 @@
 {
   imports = [
     ./keyd.nix
+    ./secret.nix
     ./powerprofile.nix
+    ./calendar.nix
   ];
 
   services.upower.enable = true;
@@ -22,13 +24,13 @@
     package = pkgs.kdePackages.sddm;
   };
 
-  services.fprintd = {
-    enable = true;
-    package = pkgs.fprintd-tod;
-    tod.enable = true;
-    # Search for "libfprint" in packages to find other drivers
-    tod.driver = pkgs.libfprint-2-tod1-elan;
-  };
+  # services.fprintd = {
+  #   enable = true;
+  #   package = pkgs.fprintd-tod;
+  #   tod.enable = true;
+  #   # Search for "libfprint" in packages to find other drivers
+  #   tod.driver = pkgs.libfprint-2-tod1-elan;
+  # };
 
   services.scx = {
     enable = true;
@@ -40,4 +42,5 @@
   services.gvfs.enable = true;
 
   services.flatpak.enable = true;
+
 }

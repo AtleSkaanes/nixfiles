@@ -8,6 +8,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     self.packages.x86_64-linux.observer
+    self.packages.x86_64-linux.stoat-desktop
+    self.packages.x86_64-linux.zen-c
+
+    file
     vim
     fastfetch
     trash-cli
@@ -17,6 +21,7 @@
     wget
     brightnessctl
     xwayland-satellite
+    ntfs3g
   ];
 
   programs.niri = {

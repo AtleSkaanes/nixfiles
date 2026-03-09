@@ -22,8 +22,13 @@
       ];
     };
 
+    # TODO: Add proton-ge without chaotic
+    # extraCompatPackages = with pkgs; [
+    #   proton-ge-custom
+    # ];
+
     extraCompatPackages = with pkgs; [
-      proton-ge-custom
+      proton-ge-bin
     ];
   };
 }

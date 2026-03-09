@@ -1,6 +1,7 @@
 {
   imports = [
     ./c-cpp.nix
+    ./gleam.nix
     ./nix.nix
     ./python.nix
     ./rust.nix

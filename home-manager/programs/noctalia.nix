@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -7,6 +7,7 @@
   # configure options
   programs.noctalia-shell = {
     enable = true;
+    package = (pkgs.noctalia-shell.override { calendarSupport = true; });
     # settings = {
     #   # configure noctalia here; defaults will
     #   # be deep merged with these attributes.

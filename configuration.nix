@@ -153,7 +153,6 @@
     type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [
-      fcitx5-mozc
       fcitx5-gtk
     ];
   };
@@ -168,6 +167,9 @@
 
       nerd-fonts.noto
       nerd-fonts.jetbrains-mono
+      crimson.all
+      crimson-pro.all
+      fira-sans.all
     ];
   };
   # This value determines the NixOS release from which the default
