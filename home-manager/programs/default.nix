@@ -8,13 +8,16 @@
     ./typst.nix
     ./rofi.nix
     ./xdg.nix
-    ./zsh.nix
   ];
 
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.default
     inputs.batlert.packages.x86_64-linux.default
+    
+    gcr
 
+    inkscape-with-extensions
+  
     element-desktop
     vesktop
 

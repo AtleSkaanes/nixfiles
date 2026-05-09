@@ -22,6 +22,8 @@
     KneeCapStealer = {
       url = "github:KneeCapStealer/NixOSconfig";
     };
+    # Wgnord
+    jmanch.url = "github:JManch/nixos";
   };
 
   outputs =
@@ -40,7 +42,7 @@
       pkgs-stable = nixpkgs-stable.legacyPackages."${system}";
     in
     {
-      formatter."${system}" = pkgs.nixfmt-rfc-style;
+      formatter."${system}" = pkgs.nixfmt;
       home-manager.useUserPackages = true;
       home-manager.useGlobalPkgs = true;
       home-manager.backupFileExtension = "hm-backup";

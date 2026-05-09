@@ -2,7 +2,10 @@
 {
   imports = [
     ./langs
+    ./gh.nix
+    ./git.nix
     ./unity.nix
+    ./zsh.nix
   ];
 
   home.packages = with pkgs; [
@@ -31,16 +34,5 @@
     jdk
   ];
 
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-    lfs.enable = true;
-    settings = {
-      pull.rebase = true;
-      user.name = "atleSkaanes";
-      user.email = "atle.skaanes@gmail.com";
-      init.defaultBranch = "main";
-    };
-  };
 
 }

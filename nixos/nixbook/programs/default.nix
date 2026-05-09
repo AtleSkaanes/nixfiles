@@ -22,6 +22,7 @@
     brightnessctl
     xwayland-satellite
     ntfs3g
+
   ];
 
   programs.niri = {

@@ -4,7 +4,8 @@
     enable = true;
 
     initContent = "source " + config.xdg.configHome + "/zsh/.zshrc";
+    dotDir = config.home.homeDirectory;
 
-    # dotDir =  config.xdg.configHome + "/zsh";
-  };
+  # dotDir =  config.xdg.configHome + "/zsh";
+};
 }

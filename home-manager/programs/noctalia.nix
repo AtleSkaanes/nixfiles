@@ -4,6 +4,23 @@
     inputs.noctalia.homeModules.default
   ];
 
+  home.packages = with pkgs; [
+    quickshell
+
+    # PLUGIN DEPENDS
+    grim
+    slurp
+    wl-clipboard
+    tesseract
+    imagemagick
+    zbar
+    curl
+    translate-shell
+    wf-recorder
+    ffmpeg
+    gifski
+  ];
+
   # configure options
   programs.noctalia-shell = {
     enable = true;
