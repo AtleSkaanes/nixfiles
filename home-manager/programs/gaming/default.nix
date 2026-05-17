@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     prismlauncher
-    lutris
+    # lutris
     (heroic.override {
       extraPkgs = pkgs: [
         pkgs.gamescope

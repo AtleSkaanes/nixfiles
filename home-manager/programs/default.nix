@@ -51,7 +51,7 @@
     swayosd
     fzf
     eza
-    swww
+    awww
     nautilus
     pcmanfm
     yazi

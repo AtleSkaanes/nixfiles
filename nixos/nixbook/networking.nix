@@ -1,4 +1,6 @@
+{ pkgs, ... }:
 {
+
   networking = {
     hostName = "nixbook"; # Define your hostname.
     firewall = {
@@ -11,7 +13,12 @@
     };
 
     # Enable networking
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+      ];
+    };
   };
 
   services.avahi = {
@@ -26,4 +33,7 @@
       workstation = true;
     };
   };
+
+  networking.resolvconf.enable = true;
+  # services.resolved.enable = true;
 }
