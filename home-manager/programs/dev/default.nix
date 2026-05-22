@@ -9,7 +9,7 @@
   ];
 
   home.packages = with pkgs; [
-    ratty 
+    # ratty 
 
     msbuild
     meld

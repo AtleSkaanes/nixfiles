@@ -47,8 +47,6 @@
     ghostty
     kitty
     playerctl
-    swaynotificationcenter
-    swayosd
     fzf
     eza
     awww

@@ -11,6 +11,6 @@
     };
 
     rofi.enable = false;
-    swaync.enable = false;
+    # swaync.enable = false;
   };
 }
