@@ -30,7 +30,6 @@
     enable = true;
     flake = "/home/atle/.config/nixos/";
   };
-  # programs.hyprpanel.enable = true;
 
   programs._1password.enable = true;
   programs._1password-gui = {

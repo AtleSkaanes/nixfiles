@@ -69,16 +69,18 @@
           modules = [
             catppuccin.nixosModules.catppuccin
             nix-flatpak.nixosModules.nix-flatpak
-            # ./services
             ./nixos/nixbook
           ];
         };
-      };
-
-      packages.${system} = {
-        observer = pkgs.callPackage ./packages/observer.nix { };
-        stoat-desktop = pkgs.callPackage ./packages/stoat-desktop.nix { };
-        zen-c = pkgs.callPackage ./packages/zen-c.nix { };
+        coruscant = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs self; };
+          inherit system;
+          modules = [
+            catppuccin.nixosModules.catppuccin
+            nix-flatpak.nixosModules.nix-flatpak
+            ./nixos/coruscant
+          ];
+        };
       };
 
     };
