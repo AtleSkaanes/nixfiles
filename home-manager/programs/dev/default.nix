@@ -9,6 +9,7 @@
   ];
 
   home.packages = with pkgs; [
+    ratty
     msbuild
     meld
     glow
