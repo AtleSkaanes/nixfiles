@@ -32,9 +32,10 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
+      "btusb.enable_autosuspend=0"
     ];
 
-    kernelModules = [ "ntsync" ];
+    kernelModules = [ "ntsync" "mt7921e" ];
 
     supportedFilesystems = [ "ntfs" ];
   };
