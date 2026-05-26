@@ -14,6 +14,7 @@
     clang
     btop
     usbutils
+    pciutils
     wget
     brightnessctl
     xwayland-satellite

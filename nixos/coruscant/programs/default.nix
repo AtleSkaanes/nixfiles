@@ -13,6 +13,7 @@
     trash-cli
     clang
     btop
+    pciutils
     usbutils
     wget
     brightnessctl
