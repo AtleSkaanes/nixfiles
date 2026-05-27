@@ -32,7 +32,9 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
-      "btusb.enable_autosuspend=0"
+      # "btusb.enable_autosuspend=0"
+      # ref: https://github.com/NixOS/nixpkgs/issues/448088
+      "mt7921_common.disable_clc=1"
     ];
 
     kernelModules = [ "ntsync" "mt7921e" ];
