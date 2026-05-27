@@ -1,7 +1,7 @@
 { pkgs, self, ... }:
 {
   imports = [
-    ./steam.nix
+    ./gaming
   ];
 
   # List packages installed in system profile. To search, run:
