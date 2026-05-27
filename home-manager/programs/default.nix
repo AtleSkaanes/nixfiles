@@ -6,6 +6,7 @@
     ./ui
     ./noctalia.nix
     ./typst.nix
+    ./swaylock.nix
     ./rofi.nix
     ./xdg.nix
   ];
@@ -42,7 +43,6 @@
     imagemagick
 
     alacritty
-    swaylock
     cowsay
     neovim
     ghostty
