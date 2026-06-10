@@ -16,6 +16,7 @@
     inputs.batlert.packages.x86_64-linux.default
     solitaire-tui
     
+    wayscriber
     gcr
 
     inkscape-with-extensions
