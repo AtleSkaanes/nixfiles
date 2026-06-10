@@ -63,6 +63,7 @@
 
       nixosConfigurations = {
         replaceStdenv = self.stdenv;
+
         nixbook = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs self; };
           inherit system;

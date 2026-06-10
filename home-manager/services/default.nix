@@ -1,5 +1,6 @@
 {
   imports = [
+    ./swayidle.nix
     ./flatpak.nix
   ];
 
