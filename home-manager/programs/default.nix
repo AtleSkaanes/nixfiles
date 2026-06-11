@@ -4,7 +4,9 @@
     ./dev
     ./gaming
     ./ui
+    ./bat.nix
     ./ghostty.nix
+    ./glow.nix
     ./noctalia.nix
     ./typst.nix
     ./swaylock.nix
@@ -33,7 +35,6 @@
     tidal-hifi
     wl-mirror
     brave
-    bat
     zip
     unzip
     wl-clipboard

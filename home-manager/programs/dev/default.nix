@@ -11,7 +11,6 @@
   home.packages = with pkgs; [
     msbuild
     meld
-    glow
     hexyl
 
     vscode-extensions.vadimcn.vscode-lldb.adapter
