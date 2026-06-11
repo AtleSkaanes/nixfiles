@@ -4,6 +4,7 @@
     ./dev
     ./gaming
     ./ui
+    ./ghostty.nix
     ./noctalia.nix
     ./typst.nix
     ./swaylock.nix
@@ -47,7 +48,6 @@
     alacritty
     cowsay
     neovim
-    ghostty
     kitty
     playerctl
     fzf
