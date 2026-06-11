@@ -22,7 +22,7 @@
   ];
 
   # configure options
-  programs.noctalia-shell = {
+  programs.noctalia = {
     enable = true;
     package = (pkgs.noctalia-shell.override { calendarSupport = true; });
     # settings = {
