@@ -9,10 +9,10 @@
   ];
 
   home.packages = with pkgs; [
-    ratty
     msbuild
     meld
     glow
+    hexyl
 
     vscode-extensions.vadimcn.vscode-lldb.adapter
     direnv

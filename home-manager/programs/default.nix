@@ -8,6 +8,7 @@
     ./typst.nix
     ./swaylock.nix
     ./rofi.nix
+    ./yazi.nix
     ./xdg.nix
   ];
 
@@ -53,13 +54,9 @@
     eza
     awww
     nautilus
-    pcmanfm
-    yazi
     mpv
-    yt-dlp
     eog
     zathura
-    sioyek
     starship
     transmission_4-qt
     gnome-clocks
