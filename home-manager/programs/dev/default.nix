@@ -28,9 +28,6 @@
 
     stylua
 
-    jetbrains.clion
-    jetbrains.rider
-
     jdk
   ];
 
