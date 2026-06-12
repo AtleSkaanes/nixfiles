@@ -5,6 +5,7 @@
     ./gaming
     ./ui
     ./bat.nix
+    ./btop.nix
     ./ghostty.nix
     ./glow.nix
     ./noctalia.nix
@@ -13,6 +14,7 @@
     ./rofi.nix
     ./yazi.nix
     ./xdg.nix
+    ./zathura.nix
   ];
 
   home.packages = with pkgs; [
@@ -57,7 +59,6 @@
     nautilus
     mpv
     eog
-    zathura
     starship
     transmission_4-qt
     gnome-clocks

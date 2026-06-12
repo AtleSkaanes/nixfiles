@@ -1,4 +1,4 @@
-{ pkgs, self, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./gaming
@@ -12,7 +12,6 @@
     fastfetch
     trash-cli
     clang
-    btop
     pciutils
     usbutils
     wget
