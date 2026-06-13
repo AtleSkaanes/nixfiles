@@ -9,12 +9,6 @@
       description = "The Zap package to use.";
     };
 
-    enableZshIntegration = lib.mkOption {
-      default = true;
-      type = lib.types.bool;
-      description = "Whether to enable Zsh integration";
-    };
-
     plugins = {
       enableSyntaxHighlighting = lib.mkOption {
         default = true;
@@ -68,12 +62,12 @@
         '';
         in
       lib.mkMerge [
-         (lib.mkIf cfg.enableZshIntegration  (lib.mkBefore init))
-         (lib.mkIf cfg.plugins.enableSyntaxHighlighting (lib.mkBefore plugHighlighting))
-         (lib.mkIf cfg.plugins.enableSupercharge (lib.mkBefore plugSupercharge))
-         (lib.mkIf cfg.plugins.enablePrompt (lib.mkBefore plugPrompt))
-         (lib.mkIf cfg.plugins.enableAutoSuggestions (lib.mkBefore plugAutoSuggestions))
-        (lib.mkBefore completionSystem)
+         (lib.mkAfter init)
+         (lib.mkIf cfg.plugins.enableSyntaxHighlighting (lib.mkAfter plugHighlighting))
+         (lib.mkIf cfg.plugins.enableSupercharge (lib.mkAfter plugSupercharge))
+         (lib.mkIf cfg.plugins.enablePrompt (lib.mkAfter plugPrompt))
+         (lib.mkIf cfg.plugins.enableAutoSuggestions (lib.mkAfter plugAutoSuggestions))
+        (lib.mkAfter completionSystem)
       ];
   };
 }
