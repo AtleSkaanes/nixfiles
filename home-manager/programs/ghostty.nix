@@ -18,4 +18,9 @@
     enable = true;
     settings.default = lib.singleton "com.mitchellh.ghostty.desktop";
   };
+
+  home.sessionVariables = {
+    TERM = "xterm-ghostty";
+    TERMINAL = "xterm-ghostty";
+  };
 }
