@@ -46,7 +46,7 @@
           }
         '';
         fzf = ''
-          source <(fzf --zsh)
+          source <(${pkgs.fzf}/bin/fzf --zsh)
           export FZF_DEFAULT_OPTS=" \
             --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
             --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -55,7 +55,10 @@
             --multi"
         '';
         starship = ''
-          eval "$(starship init zsh)"
+          eval "$(${pkgs.starship}/bin/starship init zsh)"
+        '';
+        any-nix-shell = ''
+          ${pkgs.any-nix-shell}/bin/any-nix-shell zsh | source /dev/stdin
         '';
         lineedit = ''
           autoload -U edit-command-line
@@ -68,14 +71,21 @@
           bindkey "^[[1;50" backward-word
           bindkey "\e[3~" delete-char
         '';
+        styles = ''
+          typeset -A ZSH_HIGHLIGHT_STYLES
+          ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=yellow'
+          ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=yellow,bold'
+        '';
       in
       lib.mkMerge [
         (lib.mkAfter mkdirc)
         (lib.mkAfter find-desktop)
         (lib.mkAfter fzf)
         (lib.mkAfter starship)
+        (lib.mkAfter any-nix-shell)
         (lib.mkAfter lineedit)
         (lib.mkAfter keybinds)
+        (lib.mkAfter styles)
       ];
   };
   

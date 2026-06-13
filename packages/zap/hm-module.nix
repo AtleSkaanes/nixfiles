@@ -62,12 +62,12 @@
         '';
         in
       lib.mkMerge [
-         (lib.mkAfter init)
-         (lib.mkIf cfg.plugins.enableSyntaxHighlighting (lib.mkAfter plugHighlighting))
-         (lib.mkIf cfg.plugins.enableSupercharge (lib.mkAfter plugSupercharge))
-         (lib.mkIf cfg.plugins.enablePrompt (lib.mkAfter plugPrompt))
-         (lib.mkIf cfg.plugins.enableAutoSuggestions (lib.mkAfter plugAutoSuggestions))
-        (lib.mkAfter completionSystem)
+         (lib.mkBefore init)
+         (lib.mkIf cfg.plugins.enableSyntaxHighlighting (lib.mkBefore plugHighlighting))
+         (lib.mkIf cfg.plugins.enableSupercharge (lib.mkBefore plugSupercharge))
+         (lib.mkIf cfg.plugins.enablePrompt (lib.mkBefore plugPrompt))
+         (lib.mkIf cfg.plugins.enableAutoSuggestions (lib.mkBefore plugAutoSuggestions))
+        (lib.mkBefore completionSystem)
       ];
   };
 }
