@@ -14,7 +14,6 @@
     hexyl
 
     vscode-extensions.vadimcn.vscode-lldb.adapter
-    direnv
     atuin
     openssl
     pkg-config

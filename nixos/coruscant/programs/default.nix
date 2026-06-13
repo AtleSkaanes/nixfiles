@@ -26,6 +26,9 @@
   };
 
   programs.zsh.enable = true;
+  # get completion for system packages (e.g. systemd).
+  environment.pathsToLink = [ "/share/zsh" ];
+
   programs.nh = {
     enable = true;
     flake = "/home/atle/.config/nixos/";

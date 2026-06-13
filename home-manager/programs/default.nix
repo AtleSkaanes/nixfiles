@@ -59,7 +59,6 @@
     nautilus
     mpv
     eog
-    starship
     transmission_4-qt
     gnome-clocks
     gnome-text-editor
@@ -71,7 +70,6 @@
     blueman
     adw-bluetooth
     obsidian
-    zoxide
     pwvucontrol
     stow
     warp # NOT THE TERMINAL, DON'T WORRY

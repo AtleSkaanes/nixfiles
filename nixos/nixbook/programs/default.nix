@@ -26,6 +26,8 @@
   };
 
   programs.zsh.enable = true;
+  environment.pathsToLink = [ "/share/zsh" ];
+
   programs.nh = {
     enable = true;
     flake = "/home/atle/.config/nixos/";
