@@ -43,9 +43,8 @@
     in
     {
       formatter."${system}" = pkgs.nixfmt;
-      home-manager.useUserPackages = true;
-      home-manager.useGlobalPkgs = true;
-      home-manager.backupFileExtension = "hm-backup";
+
+      packages."${system}".zap = pkgs.callPackage ./packages/zap/default.nix {};
 
       homeConfigurations.atle = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
