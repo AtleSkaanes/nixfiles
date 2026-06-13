@@ -7,8 +7,6 @@
   programs.zsh = {
     enable = true;
 
-    # defaultKeymap = "viins";
-
     shellAliases = {
       ls = "eza";
       ll = "eza -alF";
@@ -83,7 +81,6 @@
   
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true;
     options = [
       "--cmd cd"
     ];
@@ -91,12 +88,10 @@
 
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
   };
 
   programs.zap = {
     enable = true;
-    enableZshIntegration = true;
     plugins = {
       enableAutoSuggestions = true;
       enableSupercharge = true;
@@ -108,4 +103,6 @@
   home.packages = with pkgs; [
     starship
   ];
+
+  catppuccin.zsh-syntax-highlighting.enable = false;
 }
