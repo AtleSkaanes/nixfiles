@@ -19,11 +19,6 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    KneeCapStealer = {
-      url = "github:KneeCapStealer/NixOSconfig";
-    };
-    # Wgnord
-    jmanch.url = "github:JManch/nixos";
   };
 
   outputs =
