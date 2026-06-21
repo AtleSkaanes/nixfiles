@@ -34,7 +34,7 @@
     fd
     libnotify
 
-    tidal-hifi
+    sone
     wl-mirror
     brave
     zip
