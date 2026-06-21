@@ -87,6 +87,18 @@
         (lib.mkAfter keybinds)
         (lib.mkAfter styles)
       ];
+
+    sessionVariables = {
+      EDITOR = "nvim";
+      CC = "clang";
+      CXX = "clang++";
+      CPP = "clang-cpp";
+    };
+
+    envExtra = ''
+      path+=("$HOME/go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin")
+      export PATH
+    '';
   };
   
   programs.zoxide = {
