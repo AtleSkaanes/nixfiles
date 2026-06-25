@@ -5,7 +5,7 @@
     settings = {
       theme = "Catppuccin Mocha";
       font-family = "JetBrainsMono NerdFont";
-      background-opacity = 0.95;
+      background-opacity = 0.90;
       background-blur = true;
       background-opacity-cells = true;
 
