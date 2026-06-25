@@ -13,7 +13,7 @@
     suspend_t = 2400;
   in
   {
-    enable = true;
+    enable = false; # Use noctalia shells version
     timeouts = [
       {
         timeout = dim_t; # in seconds
