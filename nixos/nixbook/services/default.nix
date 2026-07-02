@@ -4,6 +4,7 @@
 }:
 {
   imports = [
+    ./batlert.nix
     ./keyd.nix
     ./noctalia-greeter.nix
     ./secret.nix

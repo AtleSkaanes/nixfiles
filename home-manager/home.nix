@@ -61,6 +61,10 @@
     BROWSER = "zen";
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "pnpm-10.29.2"
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
