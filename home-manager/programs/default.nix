@@ -70,6 +70,7 @@
     adw-bluetooth
     obsidian
     pwvucontrol
+    easyeffects
     stow
     warp # NOT THE TERMINAL, DON'T WORRY
     clipse
