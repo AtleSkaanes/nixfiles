@@ -16,6 +16,7 @@
       CC = "$CC";
       CXX = "$CXX";
       weekn = "date +%U";
+      ff = "fastfetch";
     };
 
     dotDir = "${config.xdg.configHome}/zsh";
