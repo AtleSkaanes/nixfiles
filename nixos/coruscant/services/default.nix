@@ -5,6 +5,7 @@
 {
   imports = [
     ./keyd.nix
+    ./noctalia-greeter.nix
     ./secret.nix
     ./calendar.nix
     ./tailscale.nix
@@ -19,11 +20,11 @@
     # variant = "nodeadkeys";
   };
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    package = pkgs.kdePackages.sddm;
-  };
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   wayland.enable = true;
+  #   package = pkgs.kdePackages.sddm;
+  # };
 
   services.scx = {
     enable = true;
