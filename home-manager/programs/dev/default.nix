@@ -13,15 +13,13 @@
     meld
     hexyl
 
-    vscode-extensions.vadimcn.vscode-lldb.adapter
     atuin
     openssl
     pkg-config
     repgrep
     hyperfine
     poop
-    vscodium
-    vscode-extensions.vadimcn.vscode-lldb
+    vscodium.fhs
     gdb
     just
 
