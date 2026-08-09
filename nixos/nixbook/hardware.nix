@@ -47,4 +47,19 @@
       };
     };
   };
+
+  # Making sure the laptop does not overheat
+  services.thermald.enable = true;
+
+  # Enables thunderbolt
+  services.hardware.bolt.enable = true;
+
+  # Firmware updates
+  services.fwupd.enable =  true;
+
+  # Disable cache for fwupd, which fixes a CVE
+  systemd.services.passim.enable = false;
+  services.fwupd.daemonSettings = {
+    P2pPolicy = "nothing";
+  };
 }
