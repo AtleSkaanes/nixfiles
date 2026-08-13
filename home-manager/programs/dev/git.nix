@@ -6,7 +6,7 @@
     lfs.enable = true;
     settings = {
       pull.rebase = true;
-      user.name = "atleSkaanes";
+      user.name = "Atle Skaanes Ahrenfeldt";
       user.email = "atle.skaanes@gmail.com";
       init.defaultBranch = "main";
       merge.tool = "meld";
@@ -22,5 +22,9 @@
         rank = "shortlog --summary --numbered --no-merges";
       };
     };
+    ignores = [
+      "**/.envrc"
+      "**/.direnv"
+    ];
   };
 }
