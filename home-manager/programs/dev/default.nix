@@ -26,6 +26,9 @@
     stylua
 
     jdk
+
+    neovim
+    tree-sitter
   ];
 
 

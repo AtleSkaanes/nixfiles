@@ -49,7 +49,6 @@
 
     alacritty
     cowsay
-    neovim
     kitty
     playerctl
     fzf
