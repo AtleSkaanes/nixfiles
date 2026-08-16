@@ -1,9 +1,7 @@
-{ pkgs, ... }:
 {
   hardware.xone.enable = true;
   hardware.logitech.wireless.enable = true;
 
-  services.xserver.videoDrivers = [ "modesetting" ];
 
   hardware = {
     enableAllFirmware = true;
