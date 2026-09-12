@@ -16,7 +16,7 @@
     zbar
     curl
     translate-shell
-    wf-recorder
+    # wf-recorder
     ffmpeg
     gifski
   ];

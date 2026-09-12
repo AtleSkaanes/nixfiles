@@ -32,12 +32,18 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
+      "usbcore.autosuspend=-1" # Stop auto suspending USB devices
       # "btusb.enable_autosuspend=0"
       # ref: https://github.com/NixOS/nixpkgs/issues/448088
       "mt7921_common.disable_clc=1"
     ];
 
     kernelModules = [ "ntsync" "mt7921e" ];
+
+    extraModprobeConfig = ''
+      # Quirk 0x4 (HID_QUIRK_IGNORE) forces usbhid to skip the broken control endpoint completely
+      options usbhid quirks=0x3142:0xa010:0x00000004
+    '';
 
     supportedFilesystems = [ "ntfs" ];
   };

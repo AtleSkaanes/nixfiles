@@ -9,6 +9,7 @@
     ./secret.nix
     ./calendar.nix
     ./tailscale.nix
+    ./pipewire.nix
     ./vpn.nix
   ];
 

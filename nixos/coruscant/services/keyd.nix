@@ -4,7 +4,10 @@
     keyboards = {
       # The name is just the name of the configuration file, it does not really matter
       default = {
-        ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
+        ids = [ 
+          "*"
+          "-3142:a010" # Do not match mic
+        ];
         # Everything but the ID section:
         # settings = {
         #   # The main layer, if you choose to declare it in Nix

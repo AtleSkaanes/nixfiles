@@ -1,0 +1,26 @@
+{
+  services.pipewire = {
+    enable = true;
+    wireplumber = {
+      enable = true;
+      extraConfig = {
+        "52-disable-fifine-sink" = {
+          "monitor.alsa.rules" = [
+            {
+              matches = [
+                {
+                  "node.name" = "alsa_output.usb-MV-SILICON_fifine_Microphone_20190808-00.analog-stereo";
+                }
+              ];
+              actions = {
+                update-props = {
+                  "node.disabled" = true;
+                };
+              };
+            }
+          ];
+        };
+      };
+    };
+  };
+}
