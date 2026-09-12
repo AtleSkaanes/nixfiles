@@ -22,7 +22,7 @@
     solitaire-tui
     
     wayscriber
-    gcr
+    gcr_4
 
     inkscape-with-extensions
   
