@@ -8,6 +8,7 @@
     enable = true;
 
     shellAliases = {
+      g = "git";
       ls = "eza";
       ll = "eza -alF";
       edit = "sudo -e";
