@@ -8,6 +8,7 @@
     ./keyd.nix
     ./noctalia-greeter.nix
     ./secret.nix
+    ./virt.nix
     ./powerprofile.nix
     ./calendar.nix
     ./tailscale.nix
