@@ -7,7 +7,6 @@
     clang-tools
     lld
     lldb
-    openmp
 
     pkgs.cmake
     pkgs.gnumake
