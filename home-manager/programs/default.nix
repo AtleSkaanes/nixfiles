@@ -79,7 +79,7 @@
     quickemu
     qemu
 
-    libreoffice-qt6-fresh
+    libreoffice-qt-stable
 
     solaar
 
