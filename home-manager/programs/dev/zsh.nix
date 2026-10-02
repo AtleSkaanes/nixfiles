@@ -29,6 +29,9 @@
 
     initContent = 
       let
+        nr = ''
+          function nr() { nix run "nixpkgs#$1" }
+        '';
         mkdirc = ''
           function mkdirc {
             local nonFlags=()
@@ -80,6 +83,7 @@
         '';
       in
       lib.mkMerge [
+        (lib.mkAfter nr)
         (lib.mkAfter mkdirc)
         (lib.mkAfter find-desktop)
         (lib.mkAfter fzf)
