@@ -14,9 +14,9 @@
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
     };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia/cachix";
-    };
+    # noctalia = {
+    #   url = "github:noctalia-dev/noctalia/cachix";
+    # };
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
     };

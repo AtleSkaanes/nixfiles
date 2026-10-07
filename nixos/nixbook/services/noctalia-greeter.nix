@@ -5,7 +5,7 @@
   ];
 
   programs.noctalia-greeter = {
-    enable = true;
+    enable = false;
     package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     # Optional configuration
