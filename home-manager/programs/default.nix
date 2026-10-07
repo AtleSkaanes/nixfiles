@@ -19,6 +19,9 @@
 
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.default
+    brave
+    ungoogled-chromium
+
     solitaire-tui
     
     wayscriber
@@ -35,7 +38,6 @@
 
     sone
     wl-mirror
-    brave
     zip
     unzip
     wl-clipboard
