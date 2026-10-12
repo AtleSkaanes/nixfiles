@@ -2,7 +2,7 @@
 {
 
   networking = {
-    hostName = "nixbook"; # Define your hostname.
+    hostName = "hoth"; # Define your hostname.
     firewall = {
       checkReversePath = "loose";
       # Open ports in the firewall.

@@ -59,13 +59,13 @@
       nixosConfigurations = {
         replaceStdenv = self.stdenv;
 
-        nixbook = nixpkgs.lib.nixosSystem {
+         hoth = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs self; };
           inherit system;
           modules = [
             catppuccin.nixosModules.catppuccin
             nix-flatpak.nixosModules.nix-flatpak
-            ./nixos/nixbook
+            ./nixos/hoth
           ];
         };
         yavin = nixpkgs.lib.nixosSystem {
