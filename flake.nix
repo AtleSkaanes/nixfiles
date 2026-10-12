@@ -68,6 +68,15 @@
             ./nixos/nixbook
           ];
         };
+        yavin = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs self; };
+          inherit system;
+          modules = [
+            catppuccin.nixosModules.catppuccin
+            nix-flatpak.nixosModules.nix-flatpak
+            ./nixos/yavin
+          ];
+        };
         coruscant = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs self; };
           inherit system;
