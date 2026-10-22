@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./c-cpp.nix
@@ -7,5 +8,9 @@
     ./zig.nix
     ./lua.nix
     ./ocaml.nix
+  ];
+
+  home.packages = with pkgs; [
+    jdt-language-server
   ];
 }
