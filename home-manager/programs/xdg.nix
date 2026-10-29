@@ -1,11 +1,7 @@
 let
   browser = {
     name = "zen";
-    desktop = "zen.desktop";
-  };
-  editor = {
-    name = "nvim";
-    desktop = "nvim.desktop";
+    desktop = "zen-beta.desktop";
   };
   pdf_viewer = {
     name = "zathura";
