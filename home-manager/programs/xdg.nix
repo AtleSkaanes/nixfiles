@@ -9,6 +9,10 @@ let
     # name = "sioyek";
     # desktop = "sioyek.desktop";
   };
+  editor = {
+    name = "nvim";
+    desktop = "nvim.desktop";
+  };
   image_viewer = {
     name = "eog";
     desktop = "org.gnome.eog.desktop";
