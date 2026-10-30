@@ -99,6 +99,8 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
+      comic-neue
+      comic-relief
 
       nerd-fonts.noto
       nerd-fonts.jetbrains-mono
